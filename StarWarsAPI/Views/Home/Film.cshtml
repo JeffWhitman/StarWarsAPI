@@ -1,0 +1,66 @@
+﻿@model StarWarsAPI.Models.ResponseData
+
+@{
+    ViewData["Title"] = "Film";
+}
+
+<h1>Film</h1>
+
+<div>
+    <h4>ResponseData</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.people)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.people)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.planets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.planets)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.films)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.films)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.species)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.species)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.vehicles)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.vehicles)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.starships)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.starships)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ErrorMessage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ErrorMessage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.count)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.count)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

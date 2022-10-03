@@ -1,0 +1,54 @@
+﻿@model IEnumerable<StarWarsAPI.Models.FilmModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EpisodeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningCrawl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+@*                    <a asp-action="Details" asp-route-url=item.url>@Html.DisplayFor(modelItem => item.Title)</a>
+                *@                    <a asp-controller="Film" asp-action="Details" asp-route-url="@item.Url">@item.Title</a>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpisodeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningCrawl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

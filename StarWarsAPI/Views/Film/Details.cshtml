@@ -1,0 +1,60 @@
+﻿@model StarWarsAPI.Models.FilmModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FilmModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EpisodeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EpisodeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OpeningCrawl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OpeningCrawl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+    </dl>
+    <table class="table center table-striped">
+        <thead><h2>Characters</h2></thead>
+        @foreach (var character in Model.Characters)
+        {
+        <tr>
+            <td>
+                @character
+            </td>
+        </tr>
+
+        }
+
+</table>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Film">Back to List</a>
+</div>
